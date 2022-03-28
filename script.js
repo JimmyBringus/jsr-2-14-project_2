@@ -1,6 +1,13 @@
 const button = document.querySelector('button')
 const imageDiv = document.querySelector('div')
-const innerQuote = document.querySelector('h2')
+const innerQuote = document.querySelector('#textPaste')
+const innerAuthor = document.querySelector('#quoteAuthor')
+
+function createClass(name,rules){
+    var style = document.createElement('style')
+    style
+
+}
 
 button.addEventListener('click', async () => {
     let response = await axios.get(
@@ -8,18 +15,22 @@ button.addEventListener('click', async () => {
     )
     console.log(response)
     let response2 = await axios.get(
-        `https://picsum.photos/1280/720`
+        `https://picsum.photos/1920/1080`
     )
     console.log(response2)
     
-    let picsumId = response2["data.headers.picsum-id.value"]
+    let picsumId = response2.headers["picsum-id"]
 
     console.log(picsumId)
 
     let imageId = `https://picsum.photos/id/${picsumId}/info`
     console.log(imageId)
 
-    // imageDiv.innerHTML = `<img src="https://picsum.photos/id/${imageId}"`
-    // innerQuote.innerText = response.data.quote
+    document.querySelector('.imagePaste').setAttribute("style",`background-image: url('https://picsum.photos/id/${picsumId}/1920/1080.webp');`)
+
+    // imageDiv.innerHTML = `<style = "background-image: url('https://picsum.photos/id/${picsumId}}/1280/720?blur=1.webp');">`
+    // document.querySelector("#randomImg").setAttribute("src",`https://picsum.photos/id/${picsumId}/1280/720.webp`)
+    innerQuote.innerText = response.data.quote
+    innerAuthor.innerHTML = `&mdash; ${response.data.character}, <i>${response.data.anime}</i>`
 })
 

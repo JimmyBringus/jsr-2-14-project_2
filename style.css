@@ -1,9 +1,71 @@
-h2 {
-    font-family: fantasy;
-    font-size: 28px;
-
-}
-
 body {
     background-color: black;
+    color: white;
 }
+
+button {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+/* div {
+    /* min-height: 1080px; */
+    /* background-repeat: no-repeat; */
+/* } */ 
+
+
+
+.imageContainer {
+    /* min-height: 1080px; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px; */
+    /* max-height: inherit; */
+    min-height: 1080px;
+    margin: 30px;
+}
+
+
+.imagePaste {
+    display: flex;
+    min-height: 1080px;
+    background-repeat: no-repeat;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgba(0,0, 0, 0.25);
+    display: flex;
+    border-radius: 5px;
+}
+
+.blockquote {
+    text-align: left;
+    align-items: center;
+    font-family: 'Montserrat',sans-serif;
+    border-top: solid 4px;
+    border-bottom: solid 4px;
+    margin: 100px;
+    padding: 50px;
+}
+
+.blockquote h1 {
+    display: inline-block;
+    position: relative;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    padding: 40px 0 40px 0;
+}
+
+.blockquote h4 {
+    padding-top: 15px;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
