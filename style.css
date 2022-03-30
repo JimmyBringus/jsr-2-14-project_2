@@ -3,9 +3,19 @@ body {
     color: white;
 }
 
-button {
+.button1 {
     margin-left: 20px;
     margin-top: 20px;
+}
+
+.openingHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.openingHeader h2 {
+    text-align: center;
 }
 
 /* div {
@@ -69,3 +79,7 @@ button {
     font-weight: 100;
 }
 
+footer {
+    text-align: center;
+    padding-top: 250px;
+}
